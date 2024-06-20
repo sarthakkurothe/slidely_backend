@@ -1,6 +1,6 @@
-# Slidely Backend - Form Submission
+# Windows Desktop App - Google Forms Replication - Backend
 
-This is the backend for the Form Submission. It is built using Node.js and Express, and it allows for the creation, reading, updating, and deletion of submissions. It also supports searching submissions by email.
+This is the backend for the Windows Desktop App. It is built using Node.js and Express, and it allows for the creation, reading, updating, and deletion of submissions. It also supports searching submissions by email.
 
 ## Features
 

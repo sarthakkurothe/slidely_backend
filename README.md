@@ -1,11 +1,12 @@
-#Slidely Backend - Form Submission
+# Slidely Backend - Form Submission
 
-This is the backend for the Submissions project. It is built using Node.js and Express, and it allows for the creation, reading, updating, and deletion of submissions. It also supports searching submissions by email.
+This is the backend for the Form Submission. It is built using Node.js and Express, and it allows for the creation, reading, updating, and deletion of submissions. It also supports searching submissions by email.
 
 ## Features
 
 - Submit a new form
 - Read a specific submission
+- Read all submissions
 - Edit a submission
 - Delete a submission
 - Search for submissions by email
@@ -20,11 +21,12 @@ This is the backend for the Submissions project. It is built using Node.js and E
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/submissions-backend.git
-   cd submissions-backend
+   git clone https://github.com/sarthakkurothe/slidely_backend
+   cd slidely-backend
    ```
 
 2. Install the dependencies:
+
    ```bash
    npm install
    ```
@@ -34,7 +36,7 @@ Ensure you have a `db.json` file in the root of your project directory. This fil
 
    ```bash
    {
-  "submissions": []
+     "submissions": []
    }
    ```
 
@@ -63,10 +65,10 @@ The server will start on port 3000 by default. You can access it at http://local
   
   ```bash
   {
-    "name": "John Doe",
-    "email": "john.doe@example.com",
+    "name": "test",
+    "email": "test@gmail.com",
     "phone": "1234567890",
-    "github_link": "https://github.com/johndoe",
+    "github_link": "https://github.com/test",
     "stopwatch_time": "00:10:15"
   }
   ```
@@ -79,6 +81,13 @@ The server will start on port 3000 by default. You can access it at http://local
 - **Query Parameters:**
   - `index` (required): The index of the submission to read.
 
+
+### Read All Submissions
+
+- **URL:** `/submissions`
+- **Method:** `GET`
+- **Description:** Read all submissions.
+
 ### Edit a Submission
 
 - **URL:** `/edit`
@@ -88,10 +97,10 @@ The server will start on port 3000 by default. You can access it at http://local
 
   ```bash
   {
-    "name": "Jane Doe",
-    "email": "jane.doe@example.com",
+    "name": "test",
+    "email": "test@gmail.com",
     "phone": "0987654321",
-    "github_link": "https://github.com/janedoe",
+    "github_link": "https://github.com/test",
     "stopwatch_time": "00:20:30"
   }
   ```
@@ -111,3 +120,21 @@ The server will start on port 3000 by default. You can access it at http://local
 - **Description:** Search for submissions by email.
 - **Query Parameters:**
   - `email` (required): The email to search for.
+
+## Project Structure
+
+   ```bash
+   slidely-backend/
+├── db.json
+├── package.json
+├── tsconfig.json
+└── src/
+    ├── index.ts
+    └── routes.ts
+   ```
+
+- `db.json` : JSON file acting as a simple database.
+- `package.json` : Contains project metadata and dependencies.
+- `routes.ts` : Defines the API endpoints and their logic.
+- `index.ts` :Entry point for the server.
+

@@ -22,7 +22,7 @@ This is the backend for the Windows Desktop App. It is built using Node.js and E
 
    ```bash
    git clone https://github.com/sarthakkurothe/slidely_backend
-   cd slidely-backend
+   cd slidely_backend
    ```
 
 2. Install the dependencies:
